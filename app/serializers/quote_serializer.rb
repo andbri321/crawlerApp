@@ -1,8 +1,10 @@
 class QuoteSerializer < ActiveModel::Serializer
   attributes :name,:author,:author_about
 
-  has_many :tags do
-    link(:related) { contact_tags_url(object.id) }
+  has_many :tags
+
+  def tags
+    Tag.where(quote_id:object.id).pluck(:name)
   end
-  
+
 end
