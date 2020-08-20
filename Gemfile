@@ -8,6 +8,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'jwt'
 gem 'mechanize', '~> 2.7', '>= 2.7.5'
 gem 'versionist'
+gem 'kaminari-mongoid'
+gem 'api-pagination'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
