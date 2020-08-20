@@ -1,5 +1,5 @@
 class QuoteSerializer < ActiveModel::Serializer
-  attributes :name,:author,:author_about
+  attributes :quote,:author,:author_about
 
   has_many :tags
 
