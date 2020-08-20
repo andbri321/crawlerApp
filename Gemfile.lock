@@ -162,10 +162,15 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    versionist (2.0.1)
+      activesupport (>= 3)
+      railties (>= 3)
+      yard (~> 0.9.20)
     webrobots (0.1.2)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    yard (0.9.25)
 
 PLATFORMS
   ruby
@@ -183,6 +188,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+  versionist
 
 RUBY VERSION
    ruby 2.5.1p57
