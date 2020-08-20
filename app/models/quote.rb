@@ -5,4 +5,9 @@ class Quote
   field :author_about, type: String
 
   has_many :tags, dependent: :destroy
+
+  def quote
+    self.name
+  end
+
 end
