@@ -5,7 +5,7 @@ module V1
     before_action :set_quotes, only: [:show]
 
     def show
-      render json: @quotes
+      render json: @quotes, meta: pagination(@quotes)
     end
 
     private
@@ -17,7 +17,7 @@ module V1
       end
 
       quote_ids = Tag.where(name:params[:search_tag]).pluck(:quote_id)
-      @quotes = Quote.where(:id.in => quote_ids )
+      @quotes = Quote.where(:id.in => quote_ids ).page(params[:page])
     end
 
   end
