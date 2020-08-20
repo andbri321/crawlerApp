@@ -5,7 +5,9 @@ module V1
     before_action :set_quotes, only: [:show]
 
     def show
-      render json: @quotes, meta: pagination(@quotes)
+      if stale?(etag: @quotes)
+        render json: @quotes, meta: pagination(@quotes)
+      end
     end
 
     private
