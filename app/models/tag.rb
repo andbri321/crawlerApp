@@ -3,4 +3,7 @@ class Tag
   field :name, type: String
 
   belongs_to :quote
+  
+  validates :name, presence: true
+
 end

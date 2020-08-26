@@ -9,8 +9,10 @@ class Quote
 
   has_many :tags, dependent: :destroy
 
+  validates :name, presence: true
+
   def quote
-    self.name
+    "#{self.name}"
   end
 
 end

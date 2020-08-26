@@ -1,9 +1,7 @@
-
-
 module V1
   class QuotesController < ApplicationController
     before_action :set_quotes, only: [:show]
-
+    
     def show
       if stale?(etag: @quotes)
         render json: @quotes, meta: pagination(@quotes)
